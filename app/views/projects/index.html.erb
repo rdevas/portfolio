@@ -1,0 +1,33 @@
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Ola! Eu sou a Caroline.</h1>
+        <p class="lead text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, nam, natus dignissimos dolores voluptates expedita facilis debitis blanditiis, perferendis sunt quidem asperiores saepe. Pariatur, obcaecati praesentium provident hic culpa alias! </p>
+    </div>
+</section>
+
+<main class="container">
+
+<p id="notice"><%= notice %></p>
+
+<div class="album">
+    <div class="container">
+        <div class="row">
+          <% @projects.each do |project| %>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                <%#= image_tag project.picture, alt: 'Projeto', class: "card-img-top" %>
+                <div class="card-body">
+                    <h4><%= project.name %></h4>
+                    <p class="card-text"><%= project.description %></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    <%= link_to 'Show', project, class: "btn btn-sm btn-outline-secondary" %>
+                    </div>
+                </div>
+                </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+</div>
+
+</main>
