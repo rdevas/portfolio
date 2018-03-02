@@ -15,7 +15,7 @@
           <% @projects.each do |project| %>
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                <%#= image_tag project.picture, alt: 'Projeto', class: "card-img-top" %>
+                <%= image_tag(project.picture, :class => "card-img-top") if project.picture.present? %>
                 <div class="card-body">
                     <h4><%= project.name %></h4>
                     <p class="card-text"><%= project.description %></p>
